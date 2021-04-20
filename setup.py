@@ -29,10 +29,10 @@ setup(
     author = 'ataide@peq.coppe.ufrj.br',
     ext_modules=[
         Extension("dasslc",
-            sources = ["dasslcmodule.c",os.path.join("dasslc", "dasslc.c")],
+            sources = ["dasslcmodule.c",],
             include_dirs = get_numpy_include_dirs(),
             define_macros = defineMacros,
-            extra_objects = extraObjects,
+            extra_objects = extraObjects + [os.path.join("dasslc", "dasslc.c")],
             extra_compile_args = ["-O3"]
         )
     ]

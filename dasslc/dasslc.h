@@ -53,7 +53,9 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#ifndef __MACH__
 #include <malloc.h>
+#endif
 
 /* #define SPARSE */
 
